@@ -1,8 +1,8 @@
-import Footer from 'components/Footer';
-import Navbar from 'components/Navbar';
 import React from 'react';
+import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
 
-const PublicLayout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div className='flex flex-col justify-between h-screen'>
       <Navbar />
@@ -12,4 +12,4 @@ const PublicLayout = ({ children }) => {
   );
 };
 
-export default PublicLayout;
+export default Layout;

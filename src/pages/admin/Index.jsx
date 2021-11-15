@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const Admin = () => {
-  return <div>Index del panel de Admin</div>;
-};
+const Index = () => {
+    return (
+        <div>
+            
+        </div>
+    )
+}
 
-export default Admin;
+export default Index
