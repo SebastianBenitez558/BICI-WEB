@@ -1,15 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TriggerDarkMode from './TriggerDarkMode';
+import ImagenLogo from 'components/ImagenLogo';
+
 
 const Navbar = () => {
   return (
     <nav className='bg-red-400'>
       <ul className='flex w-full justify-between my-3'>
-        <li>Logo</li>
-        <li>Navegacion1</li>
-        <li>Navegacion2</li>
-        <li>Navegacion3</li>
+        <li> <div className='max-w-md w-full'>
+      <ImagenLogo />
+      </div>
+            </li>
+        <li>Navegacion 1</li>
+        <li>Navegacion 2</li>
         <li>
           <TriggerDarkMode />
         </li>

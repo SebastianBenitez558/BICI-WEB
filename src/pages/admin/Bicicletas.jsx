@@ -7,34 +7,34 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const bicicletasBackend = [
     {
-      nombre: 'Corolla',
-      marca: 'Toyota',
-      modelo: 2014,
-    },
-    {
-      nombre: 'Sandero',
-      marca: 'Renault',
+      tipo: 'MTB',
+      marca: 'Cannondale',
       modelo: 2020,
     },
     {
-      nombre: 'Rav4',
-      marca: 'Toyota',
+      tipo: 'Ruta',
+      marca: 'Specialized',
+      modelo: 2019,
+    },
+    {
+      tipo: 'Híbrida',
+      marca: 'Trek',
       modelo: 2021,
     },
     {
-      nombre: 'Fiesta',
-      marca: 'Ford',
+      tipo: 'Urbanas',
+      marca: 'Pinarello',
+      modelo: 2018,
+    },
+    {
+      tipo: 'BMX',
+      marca: 'GT',
+      modelo: 2021,
+    },
+    {
+      tipo: 'Pista',
+      marca: 'Giant',
       modelo: 2017,
-    },
-    {
-      nombre: 'Mazda 3',
-      marca: 'Mazda',
-      modelo: 2020,
-    },
-    {
-      nombre: 'Chevrolet',
-      marca: 'Onix',
-      modelo: 2020,
     },
 
   ];
@@ -100,16 +100,16 @@ const TablaBicicletas = ({ listaBicicletas }) => {
         <table>
           <thead>
             <tr>
-              <th>Nombre de la bicicleta</th>
-              <th>Marca de la bicicleta</th>
-              <th>Modelo de la bicicleta</th>
+              <th>Tipo</th>
+              <th>Marca</th>
+              <th>Modelo</th>
             </tr>
           </thead>
           <tbody>
             {listaBicicletas.map((bicicleta) => {
               return (
                 <tr>
-                  <td>{bicicleta.nombre}</td>
+                  <td>{bicicleta.tipo}</td>
                   <td>{bicicleta.marca}</td>
                   <td>{bicicleta.modelo}</td>
                 </tr>
@@ -146,18 +146,18 @@ const TablaBicicletas = ({ listaBicicletas }) => {
         <div className='flex flex-col items-center justify-center'>
           <h2 className='text-2xl font-extrabold text-gray-800'>Crear nueva Bicicleta</h2>
           <form ref={form} onSubmit={submitForm} className='flex flex-col'>
-        <label className='flex flex-col' htmlFor='nombre'>
-          Nombre de la bicicleta
+        <label className='flex flex-col' htmlFor='tipo'>
+          Tipo
           <input
-            name='nombre'
+            name='tipo'
             className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
             type='text'
-            placeholder='Corolla'
+            placeholder='MTB'
             required
           />
         </label>
         <label className='flex flex-col' htmlFor='marca'>
-          Marca de la bicicleta
+          Marca
           <select
             className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
             name='marca'
@@ -167,22 +167,23 @@ const TablaBicicletas = ({ listaBicicletas }) => {
             <option disabled value={0}>
               Seleccione una opción
             </option>
-            <option>Renault</option>
-            <option>Toyota</option>
-            <option>Ford</option>
-            <option>Mazda</option>
-            <option>Chevrolet</option>
+            <option>Cannondale</option>
+            <option>Specialized</option>
+            <option>Trek</option>
+            <option>Pinarello</option>
+            <option>GT</option>
+            <option>Giant</option>
           </select>
         </label>
         <label className='flex flex-col' htmlFor='modelo'>
-          Modelo de la bicicleta
+          Modelo 
           <input
             name='modelo'
             className='bg-gray-50 border border-gray-600 p-2 rounded-lg m-2'
             type='number'
             min={1992}
             max={2022}
-            placeholder='2014'
+            placeholder='2020'
             required
           />
         </label>
