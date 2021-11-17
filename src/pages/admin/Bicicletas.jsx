@@ -62,7 +62,7 @@ const bicicletasBackend = [
 
     return (
         <div className='flex h-full w-full flex-col items-center justify-start p-8'>
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-full'>
           <h2 className='text-3xl font-extrabold text-gray-900'>
             Página de administración de bicicletas
           </h2>
@@ -95,9 +95,9 @@ const TablaBicicletas = ({ listaBicicletas }) => {
       console.log('este es el listado de bicicletas en el componente de tabla', listaBicicletas);
     }, [listaBicicletas]);
     return (
-      <div className='flex flex-col items-center justify-center'>
+      <div className='flex flex-col items-center justify-center w-full'>
         <h2 className='text-2xl font-extrabold text-gray-800'>Todas las bicicletas</h2>
-        <table>
+        <table className='tabla'>
           <thead>
             <tr>
               <th>Tipo</th>
@@ -136,7 +136,7 @@ const TablaBicicletas = ({ listaBicicletas }) => {
       setMostrarTabla(true);
       setBicicletas([...listaBicicletas, nuevaBicicleta]);
       // identificar el caso de éxito y mostrar un toast de éxito
-      toast.success('Bicicleta agregado con éxito');
+      toast.success('Bicicleta agregada con éxito');
       // identificar el caso de error y mostrar un toast de error
       // toast.error('Error creando un bicicleta');
     };
