@@ -64,7 +64,7 @@ const bicicletasBackend = [
         <div className='flex h-full w-full flex-col items-center justify-start p-8'>
         <div className='flex flex-col w-full'>
           <h2 className='text-3xl font-extrabold text-gray-900'>
-            Página de administración de bicicletas
+            Administración de bicicletas
           </h2>
           <button
             onClick={() => {
@@ -96,7 +96,7 @@ const TablaBicicletas = ({ listaBicicletas }) => {
     }, [listaBicicletas]);
     return (
       <div className='flex flex-col items-center justify-center w-full'>
-        <h2 className='text-2xl font-extrabold text-gray-800'>Todas las bicicletas</h2>
+        <h2 className='text-2xl font-extrabold text-gray-800'>BICICLETAS</h2>
         <table className='tabla'>
           <thead>
             <tr>
@@ -144,7 +144,7 @@ const TablaBicicletas = ({ listaBicicletas }) => {
 
     return (
         <div className='flex flex-col items-center justify-center'>
-          <h2 className='text-2xl font-extrabold text-gray-800'>Crear nueva Bicicleta</h2>
+          <h2 className='text-2xl font-extrabold text-gray-800'>Crear Nueva Bicicleta</h2>
           <form ref={form} onSubmit={submitForm} className='flex flex-col'>
         <label className='flex flex-col' htmlFor='tipo'>
           Tipo
@@ -190,7 +190,7 @@ const TablaBicicletas = ({ listaBicicletas }) => {
 
         <button
           type='submit'
-          className='col-span-2 bg-green-400 p-2 rounded-full shadow-md hover:bg-green-600 text-white'
+          className='col-span-2 bg-green-500 p-2 rounded-full shadow-md hover:bg-green-800 text-white'
         >
           Guardar bicicleta
         </button>

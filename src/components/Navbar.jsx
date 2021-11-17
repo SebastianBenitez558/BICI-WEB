@@ -6,7 +6,7 @@ import ImagenLogo from 'components/ImagenLogo';
 
 const Navbar = () => {
   return (
-    <nav className='bg-red-400'>
+    <nav className='bg-green-500'>
       <ul className='flex w-full justify-between my-3'>
         <li> <div className='max-w-md w-full'>
       <ImagenLogo />
@@ -19,7 +19,7 @@ const Navbar = () => {
         </li>
         <li className='px-3'>
           <Link to='/login'>
-            <button className='bg-indigo-500 p-2 text-white rounded-lg shadow-md hover:bg-indigo-700'>
+            <button className='bg-blue-500 p-2 text-white rounded-lg shadow-md hover:bg-indigo-700'>
               Iniciar Sesión
             </button>
           </Link>
